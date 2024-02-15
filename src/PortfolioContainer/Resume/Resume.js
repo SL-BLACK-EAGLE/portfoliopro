@@ -50,15 +50,18 @@ export default function Resume(props) {
     { label: "Programming Skills", logoSrc: "programming-skills.svg" },
     { label: "Projects", logoSrc: "projects.svg" },
     { label: "Interests", logoSrc: "interests.svg" },
+    { label: "Tech Stack", logoSrc: "techstack.svg" },
   ];
 
   const programmingSkillDetails = [
+    { skill: "Next.js", ratingPercentage: 85 },
+    { skill: "React JS", ratingPercentage: 85 },
     { skill: "JavaScript", ratingPercentage: 80 },
-    { skill: "React JS", ratingPercentage: 60 },
+    { skill: "Java", ratingPercentage: 60 },
     { skill: "React Native", ratingPercentage: 85 },
     // {skill: "Express JS", ratingPercentage:85},
-    // {skill: "Node JS", ratingPercentage:85},
-    // {skill: "Mongo DB", ratingPercentage:85},
+    {skill: "Node JS", ratingPercentage:70},
+    {skill: "Mongo DB", ratingPercentage:80},
     // {skill: "JCore Java", ratingPercentage:85},
     { skill: "HTML", ratingPercentage: 85 },
     { skill: "CSS", ratingPercentage: 85 },
@@ -68,11 +71,18 @@ export default function Resume(props) {
 
   const projectDetails = [
     {
-      title: "Personal portfolio Website",
+      title: "Personal portfolio Website 1",
       duration: { fromDate: "2023", toDate: "2023" },
       description:
         "A personal Portfolio website to showcase all my details and project at one place",
       subHeading: "Technologies Used: React JS, Bootstrap",
+    },
+    {
+      title: "Personal portfolio Website 2 with 3D Animation",
+      duration: { fromDate: "2024", toDate: "2024" },
+      description:
+        "A personal Portfolio website to showcase all my details and project at one place",
+      subHeading: "Technologies Used: NEXT.js, Tailwind, Fremer Motion, GSAP, THREE.js, Prismic, etc.",
     },
     {
       title: "Chat Application",
@@ -86,6 +96,13 @@ export default function Resume(props) {
       description:
         "Front-End part of E-commerce sites with Admin Dashboard including login, Sign Up",
       subHeading: "Technologies Used: HTML, CSS, JavaScript, Bootstrap",
+    },
+    {
+      title: "E-Commerce Backend",
+      duration: { fromDate: "2023", toDate: "2023" },
+      description:
+        "Back-End part of E-commerce sites with Admin Dashboard including login, Sign Up, Billboard, API, Colors, Products,Database,  etc.",
+      subHeading: "Technologies Used: NEXT.js, Tailwind, Shadcn, prisma, MySQL, JWT, Bcrypt, Clerk Auth, etc.",
     },
   ];
 
@@ -191,10 +208,34 @@ export default function Resume(props) {
         description="I like to play cricket, volley ball, swimming"
       />
     </div>,
+
+    /* TECH STACK */
+    <div className="resume-screen-container" key="tech-stack">
+      <ResumeHeading
+        heading="Front-End"
+        description="React JS, Next JS, Tailwind CSS, Bootstrap, HTML, CSS, JavaScript, MUI, NextUI, "
+      />
+      <ResumeHeading
+        heading="Back-End"
+        description="Node JS, Express JS, PHP, MySQL, MongoDB"
+      />
+      <ResumeHeading
+        heading="Mobile"
+        description="React Native, Android Studio"
+      />
+      <ResumeHeading
+        heading="Database"
+        description="MySQL, MongoDB"
+      />
+      <ResumeHeading
+        heading="Tools"
+        description="VS Code, Webstome, InteliJ Idea, Git, Figma, Photoshop"
+      />
+    </div>,
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
+    let offsetHeight = 450;
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
     };
