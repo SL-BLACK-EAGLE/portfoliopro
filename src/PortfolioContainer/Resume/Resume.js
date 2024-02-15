@@ -221,7 +221,7 @@ export default function Resume(props) {
       />
       <ResumeHeading
         heading="Mobile"
-        description="React Native, Android Studio"
+        description="React Native"
       />
       <ResumeHeading
         heading="Database"
@@ -229,7 +229,7 @@ export default function Resume(props) {
       />
       <ResumeHeading
         heading="Tools"
-        description="VS Code, Webstome, InteliJ Idea, Git, Figma, Photoshop"
+        description="VS Code, Webstome, InteliJ Idea, Git, MySQL Workbench, HeidiSQL, Netbeans, Figma, Photoshop"
       />
     </div>,
   ];
